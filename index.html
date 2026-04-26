@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwi Hamdan Sukran - Calon Ketua BEM FMIPA USK 2026</title>
+    
+    <meta name="description" content="Pilih aksi nyata, bukan sekadar janji. Dukung Dwi Hamdan Sukran sebagai Ketua BEM FMIPA USK 2026. Cek visi, misi, dan track record-nya di sini!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://[link-netlify-lu].netlify.app/">
+    <meta property="og:title" content="Dwi Hamdan Sukran | Saatnya 02!">
+    <meta property="og:description" content="Calon Ketua BEM FMIPA USK 2026. Realistis aja, milih pemimpin nggak perlu tebak-tebakan. Klik untuk info detail!">
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=Hamdan+Sukran&background=0e746b&color=fff&size=512">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green': '#0e746b', 
+                        'brand-gold': '#d4af37',  
+                        'brand-dark': '#0a524c',
+                        'brand-light': '#f8fafc',
+                        'dark-bg': '#0f172a',
+                        'dark-card': '#1e293b',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Sembunyikan scrollbar pas loading */
+        body.loading-active { overflow: hidden; }
+        
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; }
+        .card-hover:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.3); border-color: #d4af37; }
+        .timeline-dot { box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2); transition: all 0.3s ease; }
+        .timeline-item:hover .timeline-dot { box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.4); transform: scale(1.2); }
+        .modal-backdrop { backdrop-filter: blur(5px); }
+        .nav-link.active { color: #0e746b; font-weight: 700; border-bottom: 2px solid #d4af37; }
+        .dark .nav-link.active { color: #d4af37; border-bottom: 2px solid #d4af37; }
+        
+        /* Mobile Menu Transitions */
+        #mobile-menu { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 400px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-dark-bg text-gray-800 dark:text-gray-200 antialiased overflow-x-hidden transition-colors duration-300 loading-active">
+
+    <!-- PRELOADER ANIMATION CANGGIH J.A.R.V.I.S APPROVED -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-brand-dark dark:bg-slate-950 flex flex-col items-center justify-center transition-transform duration-700 ease-in-out origin-top">
+        <div class="relative flex items-center justify-center h-32 w-full px-4">
+            <!-- WELCOME Text -->
+            <h1 id="loader-welcome" class="absolute text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-[0.2em] transition-all duration-500 transform scale-95 opacity-0">
+                WELCOME
+            </h1>
+            <!-- SAATNYA 02 Text -->
+            <h1 id="loader-02" class="absolute text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200 tracking-widest transition-all duration-700 transform scale-50 opacity-0 drop-shadow-[0_0_20px_rgba(212,175,55,0.6)]">
+                SAATNYA 02!
+            </h1>
+        </div>
+        <div class="mt-8 flex gap-2" id="loader-dots">
+            <div class="w-2 h-2 rounded-full bg-brand-gold animate-bounce"></div>
+            <div class="w-2 h-2 rounded-full bg-brand-gold animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-2 h-2 rounded-full bg-brand-gold animate-bounce" style="animation-delay: 0.2s"></div>
+        </div>
+    </div>
+
+    <nav class="fixed w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 shadow-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#profil" class="nav-link-scroll flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-extrabold text-xl shadow-lg">02</div>
+                    <span class="font-bold text-2xl tracking-tight text-brand-green dark:text-teal-400">Meseu2aya_Hamdan<span class="text-brand-gold"> </span></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#profil" class="nav-link nav-link-scroll text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-brand-gold font-medium py-2 transition">Profil</a>
+                    <a href="#visimisi" class="nav-link nav-link-scroll text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-brand-gold font-medium py-2 transition">Visi Misi</a>
+                    <a href="#rekamjejak" class="nav-link nav-link-scroll text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-brand-gold font-medium py-2 transition">Rekam Jejak</a>
+                    
+                    <!-- Dark Mode Toggle Desktop -->
+                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-all">
+                        <i id="theme-toggle-dark-icon" class="fas fa-moon hidden text-lg"></i>
+                        <i id="theme-toggle-light-icon" class="fas fa-sun hidden text-lg"></i>
+                    </button>
+
+                    <a href="https://voting.usk.ac.id/beranda" target="_blank" class="bg-brand-gold text-white px-6 py-2.5 rounded-full font-bold shadow-[0_4px_15px_rgba(212,175,55,0.4)] hover:bg-yellow-500 transition transform hover:scale-105 hover:-translate-y-1">
+                        Pilih Sekarang <i class="fas fa-paper-plane ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden gap-4">
+                    <!-- Dark Mode Toggle Mobile -->
+                    <button id="theme-toggle-mobile" type="button" class="text-gray-500 dark:text-gray-400 focus:outline-none p-2 transition-all">
+                        <i id="theme-toggle-dark-icon-mobile" class="fas fa-moon hidden text-xl"></i>
+                        <i id="theme-toggle-light-icon-mobile" class="fas fa-sun hidden text-xl"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" class="text-gray-500 dark:text-gray-300 hover:text-brand-green focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#profil" class="block nav-link-scroll text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-brand-green px-3 py-3 rounded-md font-medium">Profil</a>
+                <a href="#visimisi" class="block nav-link-scroll text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-brand-green px-3 py-3 rounded-md font-medium">Visi Misi</a>
+                <a href="#rekamjejak" class="block nav-link-scroll text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-brand-green px-3 py-3 rounded-md font-medium">Rekam Jejak</a>
+                <a href="https://voting.usk.ac.id/beranda" target="_blank" class="block mt-4 text-center bg-brand-gold text-white px-6 py-3 rounded-xl font-bold shadow-md hover:bg-yellow-500 transition">
+                    Pilih Sekarang <i class="fas fa-paper-plane ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profil" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-green dark:bg-slate-900 min-h-screen flex items-center transition-colors duration-300">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-brand-gold rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-2xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-white dark:bg-teal-900 rounded-full mix-blend-overlay filter blur-2xl opacity-20 animate-blob animation-delay-4000"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                
+                <!-- Teks Container: order-2 di HP (bawah), order-1 di Laptop (kiri) -->
+                <div class="text-white z-10 text-center lg:text-left order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-slate-800/50 backdrop-blur-md border border-white/20 dark:border-slate-700 text-brand-gold font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider shadow-lg">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                        Calon Ketua BEM FMIPA 2026
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                        Dwi Hamdan <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">Sukran.</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-gray-100 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Realistis aja, milih pemimpin nggak perlu tebak-tebakan. Pilih yang <strong class="text-brand-gold font-bold">nyata kerjanya</strong>, jelas prestasinya, dan didukung elemen mayoritas. Jangan titipin masa depan ke tangan yang abu-abu.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start">
+                        <a href="https://voting.usk.ac.id/beranda" target="_blank" class="bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-dark font-extrabold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.5)] transition transform hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(212,175,55,0.7)] text-center flex items-center justify-center gap-2">
+                            <span>Coblos 02 Sekarang</span> <i class="fas fa-check-circle"></i>
+                        </a>
+                        <a href="#rekamjejak" class="nav-link-scroll bg-white/10 dark:bg-slate-800/50 backdrop-blur-md border border-white/30 dark:border-slate-700 hover:bg-white/20 dark:hover:bg-slate-700/50 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transition text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-search"></i> <span>Cek Track Record</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Container: order-1 di HP (atas), order-2 di Laptop (kanan) -->
+                <div class="relative z-10 flex justify-center lg:justify-end mt-4 lg:mt-0 order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem]">
+                        <div class="absolute inset-0 border-4 border-brand-gold/50 rounded-full transform translate-x-4 translate-y-4 sm:translate-x-6 sm:translate-y-6 animate-pulse"></div>
+                        <div class="absolute inset-0 border-4 border-brand-light/30 rounded-full transform -translate-x-3 -translate-y-3 sm:-translate-x-4 sm:-translate-y-4"></div>
+                        
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-light to-gray-200 dark:from-slate-800 dark:to-slate-900 rounded-full overflow-hidden border-4 sm:border-8 border-white dark:border-slate-700 shadow-2xl relative group">
+                            <div class="w-full h-full flex items-end justify-center">
+                                <img src="hamdan.png" onerror="this.src='https://ui-avatars.com/api/?name=Hamdan+Sukran&background=0e746b&color=fff&size=512'" alt="Dwi Hamdan Sukran" class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-500 relative z-10">
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-full border-4 border-white dark:border-slate-800 flex items-center justify-center flex-col shadow-2xl z-20 hover:scale-110 transition duration-300">
+                            <span class="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider mb-0 sm:mb-1">Nomor</span>
+                            <span class="text-3xl sm:text-5xl font-extrabold text-white leading-none drop-shadow-md">02</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full leading-[0]">
+            <svg class="relative block w-full h-[30px] sm:h-[50px] md:h-[100px] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,152.47,143.62,219.65,125.4,264.13,113.31,293.75,81.3,321.39,56.44Z" class="fill-white dark:fill-dark-bg"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sisanya (Visi Misi, Rekam Jejak, Footer) tetap sama dari versi sebelumnya -->
+    <section id="visimisi" class="py-16 md:py-24 bg-white dark:bg-dark-bg relative transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16" data-aos="zoom-in">
+                <h2 class="text-xs md:text-sm font-extrabold text-brand-gold tracking-widest uppercase mb-2">Platform Gagasan</h2>
+                <h3 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-brand-green dark:text-teal-400">Arah yang Jelas untuk FMIPA</h3>
+                <div class="w-16 md:w-24 h-1 bg-brand-gold mx-auto mt-4 md:mt-6 rounded-full"></div>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-dark-card rounded-2xl md:rounded-[2rem] p-4 md:p-10 border border-gray-100 dark:border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-none max-w-5xl mx-auto transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col sm:flex-row border-b border-gray-200 dark:border-slate-700 mb-6 md:mb-8 relative gap-2 sm:gap-0">
+                    <button onclick="switchTab('visi')" id="btn-visi" class="w-full sm:w-1/2 py-4 md:py-5 text-center font-bold text-lg md:text-xl text-brand-green dark:text-brand-gold border-b-4 border-brand-green dark:border-brand-gold transition focus:outline-none flex justify-center items-center gap-2"><i class="fas fa-eye"></i> VISI</button>
+                    <button onclick="switchTab('misi')" id="btn-misi" class="w-full sm:w-1/2 py-4 md:py-5 text-center font-bold text-lg md:text-xl text-gray-400 dark:text-slate-500 border-b-4 border-transparent hover:text-brand-green dark:hover:text-brand-gold transition focus:outline-none flex justify-center items-center gap-2"><i class="fas fa-bullseye"></i> MISI</button>
+                </div>
+
+                <div id="content-visi" class="p-4 sm:p-8 md:p-12 text-center transition-all duration-500 transform opacity-100 translate-y-0">
+                    <div class="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-yellow-50 dark:bg-yellow-900/20 text-brand-gold text-2xl md:text-3xl mb-6 md:mb-8 shadow-inner">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <p class="text-xl sm:text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 leading-snug md:leading-tight">
+                        "Mewujudkan FMIPA USK yang <br class="hidden sm:block">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400 dark:from-teal-300 dark:to-teal-500">progresif</span>, 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400 dark:from-teal-300 dark:to-teal-500">kreatif</span>, dan 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400 dark:from-teal-300 dark:to-teal-500">inklusif</span><br>
+                        <span class="text-lg md:text-2xl text-gray-500 dark:text-gray-400 font-medium mt-4 block">melalui sinergi mahasiswa, akademisi, dan masyarakat."</span>
+                    </p>
+                </div>
+
+                <div id="content-misi" class="hidden p-2 sm:p-4 md:p-8 transition-all duration-500 transform opacity-0 translate-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:border-brand-gold dark:hover:border-brand-gold hover:shadow-md transition duration-300 group">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-green/10 dark:bg-teal-900/30 text-brand-green dark:text-teal-400 flex items-center justify-center font-black text-lg md:text-xl mb-4 group-hover:bg-brand-green group-hover:text-white transition">1</div>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed text-sm md:text-base">Meningkatkan <strong class="text-brand-green dark:text-teal-400">partisipasi dan kepedulian</strong> mahasiswa dalam kegiatan akademik, sosial, dan kemahasiswaan.</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:border-brand-gold dark:hover:border-brand-gold hover:shadow-md transition duration-300 group">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-green/10 dark:bg-teal-900/30 text-brand-green dark:text-teal-400 flex items-center justify-center font-black text-lg md:text-xl mb-4 group-hover:bg-brand-green group-hover:text-white transition">2</div>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed text-sm md:text-base">Mendorong <strong class="text-brand-green dark:text-teal-400">inovasi dan kreativitas</strong> mahasiswa melalui program pengembangan minat, bakat, dan kewirausahaan.</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:border-brand-gold dark:hover:border-brand-gold hover:shadow-md transition duration-300 group">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-green/10 dark:bg-teal-900/30 text-brand-green dark:text-teal-400 flex items-center justify-center font-black text-lg md:text-xl mb-4 group-hover:bg-brand-green group-hover:text-white transition">3</div>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed text-sm md:text-base">Membangun <strong class="text-brand-green dark:text-teal-400">komunikasi dan kolaborasi</strong> yang efektif antarprodi, organisasi kemahasiswaan, dan civitas akademika.</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:border-brand-gold dark:hover:border-brand-gold hover:shadow-md transition duration-300 group">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-green/10 dark:bg-teal-900/30 text-brand-green dark:text-teal-400 flex items-center justify-center font-black text-lg md:text-xl mb-4 group-hover:bg-brand-green group-hover:text-white transition">4</div>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed text-sm md:text-base">Menyediakan <strong class="text-brand-green dark:text-teal-400">wadah aspirasi</strong> mahasiswa agar suara mereka terdengar dan diperjuangkan secara transparan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rekamjejak" class="py-16 md:py-24 bg-brand-light dark:bg-slate-900/50 relative transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-xs md:text-sm font-extrabold text-brand-gold tracking-widest uppercase mb-2">Bukan Sekadar Slogan</h2>
+                <h3 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-brand-green dark:text-teal-400">Bukti Kerja & Prestasi</h3>
+                <div class="w-16 md:w-24 h-1 bg-brand-gold mx-auto mt-4 md:mt-6 rounded-full mb-4 md:mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base md:text-lg px-4">Kalau prestasi peribadi aja terbukti cemerlang, gimana ceritanya meragukan kemampuannya bawa FMIPA makin maju? <br><span class="text-brand-green dark:text-brand-gold font-bold text-xs md:text-sm italic block mt-2">*Klik kotak prestasi untuk detail lengkap</span></p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12">
+                
+                <div class="lg:col-span-7">
+                    <h4 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6 md:mb-8 flex items-center gap-3" data-aos="fade-right">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center"><i class="fas fa-trophy text-brand-gold"></i></div> 
+                        Pencapaian Prestasi
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                        <div data-aos="zoom-in" data-aos-delay="100" class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-[1.5rem] shadow-sm border-l-4 border-brand-gold dark:border-yellow-500 card-hover group" onclick="openModal('Medali Perunggu OSN', 'Pemenang medali perunggu pada Olimpiade Sains Nasional (OSN) bidang Matematika tingkat Kabupaten pada tahun 2021. Bukti kecemerlangan akademik yang tajam.', 'fa-medal', '2021')">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-yellow-50 dark:bg-slate-700 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition duration-300">
+                                    <i class="fas fa-medal text-lg md:text-xl"></i>
+                                </div>
+                                <span class="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-slate-700 px-2 md:px-3 py-1 rounded-full">2021</span>
+                            </div>
+                            <h5 class="font-bold text-gray-800 dark:text-white mb-1 md:mb-2 text-base md:text-lg leading-tight">Medali Perunggu OSN</h5>
+                            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Matematika Tingkat Kabupaten</p>
+                        </div>
+
+                        <div data-aos="zoom-in" data-aos-delay="200" class="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-[1.5rem] shadow-sm border-l-4 border-brand-green dark:border-teal-400 card-hover group" onclick="openModal('Staff BEM Terbaik 2024', 'Dinobatkan sebagai staff terbaik BEM FMIPA USK 2024. Bukti dedikasi, etika kerja yang cemerlang, dan komitmen tinggi terhadap organisasi.', 'fa-star', '2024')">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-50 dark:bg-slate-700 flex items-center justify-center text-brand-green dark:text-teal-400 group-hover:bg-brand-green group-hover:text-white transition duration-300">
+                                    <i class="fas fa-star text-lg md:text-xl"></i>
+                                </div>
+                                <span class="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-slate-700 px-2 md:px-3 py-1 rounded-full">2024</span>
+                            </div>
+                            <h5 class="font-bold text-gray-800 dark:text-white mb-1 md:mb-2 text-base md:text-lg leading-tight">Staff BEM Terbaik</h5>
+                            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">BEM FMIPA USK</p>
+                        </div>
+
+                        <div data-aos="zoom-in" data-aos-delay="300" class="bg-gradient-to-br from-white to-yellow-50 dark:from-slate-800 dark:to-slate-800 p-5 md:p-6 rounded-[1.5rem] shadow-md border border-brand-gold/30 dark:border-brand-gold/50 card-hover group sm:col-span-2" onclick="openModal('Penerima Dana INNOVILLAGE 2025', 'Berhasil menerima pendanaan dari program INNOVILLAGE Cabang Kesehatan Tahun 2025. Inisiatif konkret dalam menyumbangkan inovasi teknologi untuk menyelesaikan isu masyarakat.', 'fa-lightbulb', '2025')">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white dark:bg-slate-700 shadow-sm flex items-center justify-center text-brand-gold group-hover:scale-110 transition duration-300">
+                                    <i class="fas fa-lightbulb text-xl md:text-2xl"></i>
+                                </div>
+                                <span class="text-[10px] md:text-xs font-bold text-white bg-brand-gold px-2 md:px-3 py-1 rounded-full shadow-sm text-center">Pencapaian Terkini (2025)</span>
+                            </div>
+                            <h5 class="font-extrabold text-gray-800 dark:text-white mb-1 md:mb-2 text-lg md:text-xl">Penerima Dana INNOVILLAGE</h5>
+                            <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400">Cabang Kesehatan. Terbukti inovatif dan solutif di tingkat nasional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 mt-10 lg:mt-0">
+                    <h4 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6 md:mb-8 flex items-center gap-3" data-aos="fade-left">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-100 dark:bg-teal-900/30 flex items-center justify-center"><i class="fas fa-users text-brand-green dark:text-teal-400"></i></div> 
+                        Pengalaman Organisasi
+                    </h4>
+                    
+                    <div class="relative border-l-2 border-brand-green/20 dark:border-teal-500/30 ml-4 md:ml-5 space-y-8 md:space-y-10 pb-4">
+                        <div class="relative pl-8 md:pl-10 timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute w-4 h-4 md:w-5 md:h-5 bg-brand-green dark:bg-teal-400 rounded-full -left-[9px] md:-left-[11px] top-1 timeline-dot z-10"></div>
+                            <span class="text-[10px] md:text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Terkini - 2025</span>
+                            <h5 class="font-bold text-gray-800 dark:text-gray-100 text-lg md:text-xl leading-tight">Dirjen Pariwisata Kementerian PAREKRAF</h5>
+                            <p class="text-sm md:text-md text-gray-500 dark:text-gray-400 font-medium">BEM USK</p>
+                        </div>
+
+                        <div class="relative pl-8 md:pl-10 timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="absolute w-4 h-4 md:w-5 md:h-5 bg-white dark:bg-slate-900 border-4 border-brand-green dark:border-teal-400 rounded-full -left-[9px] md:-left-[11px] top-1 z-10"></div>
+                            <span class="text-[10px] md:text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">2025</span>
+                            <h5 class="font-bold text-gray-800 dark:text-gray-200 text-base md:text-lg leading-tight">Wakil Ketua Departemen HUAL</h5>
+                            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">HMIF FMIPA USK</p>
+                        </div>
+
+                        <div class="relative pl-8 md:pl-10 timeline-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="absolute w-4 h-4 md:w-5 md:h-5 bg-white dark:bg-slate-900 border-4 border-brand-green dark:border-teal-400 rounded-full -left-[9px] md:-left-[11px] top-1 z-10"></div>
+                            <span class="text-[10px] md:text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">2025</span>
+                            <h5 class="font-bold text-gray-800 dark:text-gray-200 text-base md:text-lg leading-tight">Ketua Divisi Porseni PSDM</h5>
+                            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">BEM FMIPA USK</p>
+                        </div>
+
+                        <div class="relative pl-8 md:pl-10 timeline-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="absolute w-3 h-3 md:w-4 md:h-4 bg-gray-200 dark:bg-slate-700 border-2 border-gray-400 dark:border-slate-500 rounded-full -left-[7px] md:-left-[9px] top-1 z-10"></div>
+                            <span class="text-[10px] md:text-xs font-bold text-gray-400 dark:text-slate-500 tracking-widest uppercase block mb-1">2024</span>
+                            <h5 class="font-bold text-gray-700 dark:text-gray-300 text-base">Staff Departemen PSDM</h5>
+                            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">BEM FMIPA USK</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark dark:bg-[#061a18] pt-16 md:pt-20 pb-8 text-white relative overflow-hidden transition-colors duration-300">
+        <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 md:mb-6 drop-shadow-lg leading-tight">Sudah tau fakta dan datanya?</h2>
+            <p class="text-gray-300 mb-8 md:mb-10 max-w-2xl mx-auto text-base md:text-lg px-4">Satu langkah kecilmu menentukan arah FMIPA USK ke depan. Pilih kolaborasi, pilih aksi yang sudah nyata terbukti di lapangan.</p>
+            
+            <a href="https://voting.usk.ac.id/beranda" target="_blank" class="inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-dark font-black text-xl md:text-2xl px-8 md:px-12 py-4 md:py-5 rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.4)] transition transform hover:-translate-y-2 hover:scale-105 mb-10 md:mb-14 w-full sm:w-auto">
+                PILIH 02 SEKARANG! <i class="fas fa-check-circle text-white drop-shadow-sm"></i>
+            </a>
+
+            <div class="border-t border-white/10 pt-8 mt-4 md:mt-8">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-gray-400 text-xs md:text-sm">
+                    <span>© 2026 Tim Sukses 02 Dwi Hamdan Sukran • Pemira BEM FMIPA USK.</span>
+                    <div class="flex items-center gap-4 border-t md:border-t-0 md:border-l border-gray-600 pt-4 md:pt-0 md:pl-4">
+                        <a href="https://instagram.com/meseu2aya_hamdan" target="_blank" class="text-gray-400 hover:text-brand-gold transition transform hover:scale-110" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://tiktok.com/@meseu2aya_hamdan" target="_blank" class="text-gray-400 hover:text-brand-gold transition transform hover:scale-110" aria-label="TikTok">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Prestasi -->
+    <div id="prestasiModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-brand-dark/80 dark:bg-black/80 modal-backdrop transition-opacity" onclick="closeModal()"></div>
+        <div class="relative bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 max-w-lg w-full mx-auto shadow-2xl transform scale-95 opacity-0 transition-all duration-300 z-10" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-red-100 dark:hover:bg-red-900 hover:text-red-500 dark:hover:text-red-400 transition">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mt-2 md:mt-4">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-yellow-50 dark:bg-slate-700 mx-auto flex items-center justify-center text-brand-gold text-3xl md:text-4xl mb-4 md:mb-6 shadow-inner" id="modalIcon"></div>
+                <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 rounded-full text-[10px] md:text-xs font-bold mb-3 md:mb-4" id="modalYear"></span>
+                <h3 class="text-xl md:text-2xl font-extrabold text-brand-green dark:text-teal-400 mb-3 md:mb-4 px-2" id="modalTitle"></h3>
+                <div class="w-12 h-1 bg-brand-gold mx-auto mb-3 md:mb-4 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base px-2" id="modalDesc"></p>
+                <button onclick="closeModal()" class="mt-6 md:mt-8 bg-gray-900 dark:bg-brand-gold text-white px-8 py-3 rounded-full font-bold w-full hover:bg-brand-green dark:hover:bg-yellow-500 transition shadow-lg">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // --- PRELOADER LOGIC J.A.R.V.I.S ---
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            const welcomeText = document.getElementById('loader-welcome');
+            const zeroTwoText = document.getElementById('loader-02');
+            const dots = document.getElementById('loader-dots');
+
+            // Phase 1: Show "WELCOME"
+            setTimeout(() => {
+                welcomeText.classList.remove('scale-95', 'opacity-0');
+                welcomeText.classList.add('scale-100', 'opacity-100');
+            }, 200);
+
+            // Phase 2: Switch to "SAATNYA 02!"
+            setTimeout(() => {
+                welcomeText.classList.remove('scale-100', 'opacity-100');
+                welcomeText.classList.add('scale-110', 'opacity-0');
+                
+                dots.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+
+                setTimeout(() => {
+                    zeroTwoText.classList.remove('scale-50', 'opacity-0');
+                    zeroTwoText.classList.add('scale-100', 'opacity-100');
+                }, 300); // Wait a bit for welcome to fade out
+            }, 1500);
+
+            // Phase 3: Lift the curtain
+            setTimeout(() => {
+                preloader.classList.add('-translate-y-full'); // Slide ke atas
+                document.body.classList.remove('loading-active'); // Balikin fungsi scroll
+                
+                // Init AOS animation right after preloader lifts
+                setTimeout(() => {
+                    AOS.init({ once: true, offset: 50 });
+                    preloader.style.display = 'none'; // Clean up DOM
+                }, 700);
+            }, 3000); // Total loading time 3 seconds
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('.nav-link-scroll').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(!targetId || targetId === '#' || targetId.startsWith('http')) return;
+                
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    const headerOffset = 80; 
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if(mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Tab Visi Misi
+        function switchTab(tab) {
+            const btnVisi = document.getElementById('btn-visi');
+            const btnMisi = document.getElementById('btn-misi');
+            const contentVisi = document.getElementById('content-visi');
+            const contentMisi = document.getElementById('content-misi');
+
+            const inactiveClass = "w-full sm:w-1/2 py-4 md:py-5 text-center font-bold text-lg md:text-xl text-gray-400 dark:text-slate-500 border-b-4 border-transparent hover:text-brand-green dark:hover:text-brand-gold transition focus:outline-none flex justify-center items-center gap-2";
+            const activeClass = "w-full sm:w-1/2 py-4 md:py-5 text-center font-bold text-lg md:text-xl text-brand-green dark:text-brand-gold border-b-4 border-brand-green dark:border-brand-gold transition focus:outline-none flex justify-center items-center gap-2";
+
+            btnVisi.className = inactiveClass;
+            btnMisi.className = inactiveClass;
+            
+            contentVisi.classList.add('hidden', 'opacity-0');
+            contentMisi.classList.add('hidden', 'opacity-0');
+
+            setTimeout(() => {
+                if (tab === 'visi') {
+                    btnVisi.className = activeClass;
+                    contentVisi.classList.remove('hidden');
+                    setTimeout(() => contentVisi.classList.remove('opacity-0'), 50);
+                } else {
+                    btnMisi.className = activeClass;
+                    contentMisi.classList.remove('hidden');
+                    setTimeout(() => contentMisi.classList.remove('opacity-0'), 50);
+                }
+            }, 10);
+        }
+
+        // JS Modal Prestasi
+        function openModal(title, desc, iconClass, year) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalYear').innerText = year;
+            document.getElementById('modalIcon').innerHTML = `<i class="fas ${iconClass}"></i>`;
+            
+            const modal = document.getElementById('prestasiModal');
+            const content = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            
+            // Avoid double overflow hiding logic clashing with preloader
+            if(!document.body.classList.contains('loading-active')){
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('prestasiModal');
+            const content = document.getElementById('modalContent');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto'; 
+            }, 300);
+        }
+
+        // Active Link Tracking & Dark Mode Init
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'text-brand-green', 'dark:text-brand-gold');
+                    link.classList.add('text-gray-500', 'dark:text-gray-400');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active', 'text-brand-green'); 
+                        link.classList.remove('text-gray-500', 'dark:text-gray-400');
+                    }
+                });
+            });
+
+            // --- DARK MODE LOGIC ---
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+            
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+            
+            const darkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+            const lightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                lightIcon.classList.remove('hidden');
+                lightIconMobile.classList.remove('hidden');
+                document.documentElement.classList.add('dark');
+            } else {
+                darkIcon.classList.remove('hidden');
+                darkIconMobile.classList.remove('hidden');
+                document.documentElement.classList.remove('dark');
+            }
+
+            function toggleTheme() {
+                darkIcon.classList.toggle('hidden');
+                lightIcon.classList.toggle('hidden');
+                darkIconMobile.classList.toggle('hidden');
+                lightIconMobile.classList.toggle('hidden');
+
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
+                } else {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                }
+            }
+
+            themeToggleBtn.addEventListener('click', toggleTheme);
+            themeToggleBtnMobile.addEventListener('click', toggleTheme);
+        });
+    </script>
+
+<a href="https://voting.usk.ac.id/beranda" target="_blank" class="fixed bottom-6 right-6 z-50 bg-brand-gold text-brand-dark px-5 py-4 rounded-full font-black shadow-[0_4px_20px_rgba(212,175,55,0.6)] hover:scale-110 transition-transform animate-bounce flex items-center gap-2 group border-2 border-white/20">
+        <i class="fas fa-paper-plane text-xl group-hover:text-white transition-colors"></i> 
+        <span class="hidden sm:inline group-hover:text-white transition-colors">VOTE 02</span>
+    </a>
+
+</body>
+</html>
