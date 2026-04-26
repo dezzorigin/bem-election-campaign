@@ -9,7 +9,7 @@ A battle-tested, high-performance political campaign landing page built for the 
 
 This project is not just a concept—it is a **deployed, real-world application** that successfully handled 400+ organic visitors during the campaign period and directly contributed to the candidate's electoral victory.
 
-🌍 **Live Demo:** [https://bem-election-campaign.netlify.app]
+🌍 **Live Demo:** https://bem-election-campaign.netlify.app
 
 ##  The Impact & Results
 - **High Conversion Rate:** Effectively routed hundreds of students directly to the university's official voting portal via strategically placed CTAs.
