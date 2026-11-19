@@ -1,91 +1,405 @@
-You are given a task to integrate an existing React component in the codebase
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamdan — Calon Ketua BEM · Nomor Urut 01</title>
+  <meta name="description" content="Landing kampanye Hamdan, calon Ketua BEM nomor urut 01: visi-misi, program kerja, tahapan pemilihan, simulasi coblos, dan formulir dukungan.">
+  <meta property="og:title" content="Hamdan — Calon Ketua BEM · Nomor Urut 01">
+  <meta property="og:description" content="Visi-misi, program kerja, tahapan pemilihan, dan simulasi coblos. BEM yang kerja, bukan sekadar janji.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bem-election.pages.dev/">
+  <meta property="og:image" content="https://bem-election.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hamdan — Calon Ketua BEM · Nomor Urut 01">
+  <meta name="twitter:description" content="Visi-misi, program kerja, tahapan pemilihan, dan simulasi coblos. BEM yang kerja, bukan sekadar janji.">
+  <meta name="twitter:image" content="https://bem-election.pages.dev/og-image.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#program">Lewati ke program kerja</a>
 
-The codebase should support:
-- shadcn project structure  
-- Tailwind CSS
-- Typescript
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#atas" aria-label="Hamdan nomor urut 01 — kembali ke atas">
+        <span class="brand-num" aria-hidden="true">01</span>
+        <span class="brand-name">Hamdan<span class="brand-dot">.</span></span>
+        <span class="brand-sub">Calon Ketua BEM</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu navigasi">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="site-nav" id="nav-menu" aria-label="Navigasi utama">
+        <a href="#visi">Visi &amp; Misi</a>
+        <a href="#program">Program</a>
+        <a href="#tahapan">Tahapan</a>
+        <a href="#simulasi">Simulasi Coblos</a>
+        <a href="#dukung">Dukung</a>
+        <a href="#faq">Tanya Jawab</a>
+        <a class="gh-link" href="https://github.com/dezzorigin/bem-election-campaign" target="_blank" rel="noopener" aria-label="Lihat kode sumber di GitHub">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+  <main id="atas">
+    <!-- Hero: poster kampanye asimetris -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Pemilihan Ketua BEM &middot; 2026</p>
+          <h1 id="hero-title">Hamdan</h1>
+          <p class="hero-office">Calon Ketua BEM &mdash; Nomor Urut <strong>01</strong></p>
+          <p class="hero-slogan">BEM yang <mark>kerja</mark>,<br>bukan sekadar janji.</p>
+          <p class="hero-lede">Satu nama, satu suara, satu periode kerja yang bisa
+            ditagih. Baca programnya, coba simulasi coblosnya, lalu putuskan
+            sendiri di bilik suara.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#simulasi">Simulasi Coblos
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#program">Lihat Program Kerja</a>
+          </div>
+          <p class="hero-note">Konten contoh template kampanye &mdash; tim kampanye
+            mengganti isi program dengan data resmi kandidat. <a href="#faq">Kenapa contoh?</a></p>
+        </div>
+        <div class="hero-photo">
+          <figure class="photo-arch">
+            <img src="hamdan.png" alt="Foto Hamdan, calon Ketua BEM, memakai jaket almamater teal" width="880" height="880" fetchpriority="high">
+            <figcaption>
+              <span class="fig-num">01</span>
+              <span class="fig-text"><strong>Hamdan</strong><br>Calon Ketua BEM</span>
+            </figcaption>
+          </figure>
+          <p class="photo-strip" aria-hidden="true"><span>Suara mahasiswa</span><span>&middot;</span><span>Kerja nyata</span><span>&middot;</span><span>BEM terbuka</span></p>
+        </div>
+      </div>
+    </section>
 
-Determine the default path for components and styles. 
-If default path for components is not /components/ui, provide instructions on why it's important to create this folder
-Copy-paste this component to /components/ui folder:
-```tsx
-smooth-scroll.tsx
-// component.tsx
-'use client';
-import { ReactLenis } from 'lenis/react';
-import React, { forwardRef } from 'react';
+    <!-- Pita berjalan -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Advokasi mahasiswa</span><span class="tick-sep">///</span>
+        <span>Transparansi anggaran</span><span class="tick-sep">///</span>
+        <span>UKM hidup lagi</span><span class="tick-sep">///</span>
+        <span>Ruang belajar layak</span><span class="tick-sep">///</span>
+        <span>Advokasi mahasiswa</span><span class="tick-sep">///</span>
+        <span>Transparansi anggaran</span><span class="tick-sep">///</span>
+        <span>UKM hidup lagi</span><span class="tick-sep">///</span>
+        <span>Ruang belajar layak</span><span class="tick-sep">///</span>
+      </div>
+    </div>
 
-const Component = forwardRef<HTMLElement>((props, ref) => {
-  return (
-    <ReactLenis root>
-      <main ref={ref}>
-        <article>
-          <section className='text-white h-screen w-full bg-slate-950 grid place-content-center sticky top-0'>
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
+    <!-- Visi & Misi -->
+    <section class="section visi" id="visi" aria-labelledby="visi-title">
+      <div class="wrap">
+        <p class="section-kicker">01 &mdash; Visi &amp; Misi</p>
+        <h2 id="visi-title">BEM yang bisa ditagih kerjanya.</h2>
+        <div class="visi-grid">
+          <div class="visi-statement">
+            <p class="visi-label">Visi</p>
+            <p class="visi-text">Menjadikan BEM rumah bersama mahasiswa: setiap
+              aspirasi tercatat, setiap anggaran terbuka, setiap program ada
+              penanggung jawabnya dan ada laporannya.</p>
+          </div>
+          <ol class="misi-list">
+            <li>
+              <span class="misi-num" aria-hidden="true">M1</span>
+              <div><h3>Suara sampai, bukan sekadar didengar</h3>
+              <p>Kanal aspirasi tertulis dengan tenggat balasan 7 hari kerja dan
+                rekap bulanan yang ditempel di papan pengumuman dan kanal resmi BEM.</p></div>
+            </li>
+            <li>
+              <span class="misi-num" aria-hidden="true">M2</span>
+              <div><h3>UKM dan komunitas kembali jalan</h3>
+              <p>Jadwal kegiatan, pendanaan, dan pendampingan UKM dirapikan jadi
+                satu kalender terbuka supaya tidak ada lagi kegiatan yang mati
+                karena tidak tahu harus lapor ke siapa.</p></div>
+            </li>
+            <li>
+              <span class="misi-num" aria-hidden="true">M3</span>
+              <div><h3>Anggaran terbuka, laporan berkala</h3>
+              <p>Setiap rupiah dana kemahasiswaan yang dikelola BEM dilaporkan
+                tiap tiga bulan — pemasukan, pemakaian, dan sisa — agar bisa
+                diperiksa siapa saja.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-            <h1 className='2xl:text-7xl text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-              I Know What Exactly you're <br /> Looking For! Scroll Please 👇
-            </h1>
-          </section>
+    <!-- Program kerja: daftar bernomor vertikal -->
+    <section class="section program" id="program" aria-labelledby="program-title">
+      <div class="wrap">
+        <p class="section-kicker">02 &mdash; Program Kerja</p>
+        <h2 id="program-title">Lima program, lima penanggung jawab.</h2>
+        <p class="section-lede">Klik tiap program untuk melihat cara kerjanya.
+          Semua program di bawah ini contoh template — ganti dengan program
+          resmi tim kampanye.</p>
+        <ol class="program-list">
+          <li class="program-item">
+            <details>
+              <summary>
+                <span class="program-num" aria-hidden="true">01</span>
+                <span class="program-head"><span class="program-name">Advokasi &amp; Aspirasi</span>
+                <span class="program-tag">Kanal aduan + tenggat balasan</span></span>
+                <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="program-body">
+                <p>Formulir aspirasi daring dan kotak saran di sekretariat BEM.
+                  Setiap laporan masuk dicatat nomornya, dijawab paling lambat
+                  7 hari kerja, dan rekapnya dipublikasikan tiap bulan. Laporan
+                  tanpa balasan masuk daftar tunggakan yang dibacakan di rapat
+                  terbuka.</p>
+              </div>
+            </details>
+          </li>
+          <li class="program-item">
+            <details>
+              <summary>
+                <span class="program-num" aria-hidden="true">02</span>
+                <span class="program-head"><span class="program-name">Dana &amp; Kegiatan UKM</span>
+                <span class="program-tag">Satu kalender, satu pintu pengajuan</span></span>
+                <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="program-body">
+                <p>Kalender kegiatan UKM dibuka untuk umum, pengajuan dana
+                  memakai satu formulir baku dengan daftar cek persyaratan,
+                  dan keputusan pendanaan diumumkan beserta alasannya. UKM yang
+                  kegiatannya disetujui mendapat pendampingan administrasi
+                  sampai laporan pertanggungjawaban selesai.</p>
+              </div>
+            </details>
+          </li>
+          <li class="program-item">
+            <details>
+              <summary>
+                <span class="program-num" aria-hidden="true">03</span>
+                <span class="program-head"><span class="program-name">Ruang Belajar &amp; Fasilitas</span>
+                <span class="program-tag">Laporan kerusakan + tindak lanjut</span></span>
+                <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="program-body">
+                <p>Survei fasilitas tiap awal semester — ruang kelas, toilet,
+                  musala, kantin, dan akses internet — hasilnya disusun jadi
+                  daftar prioritas perbaikan dan dibawa BEM ke pihak kampus
+                  dengan bukti foto dan jumlah pelapor. Progresnya dipantau di
+                  papan pengumuman.</p>
+              </div>
+            </details>
+          </li>
+          <li class="program-item">
+            <details>
+              <summary>
+                <span class="program-num" aria-hidden="true">04</span>
+                <span class="program-head"><span class="program-name">Kewirausahaan Mahasiswa</span>
+                <span class="program-tag">Bazar rutin + pendampingan usaha</span></span>
+                <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="program-body">
+                <p>Bazar mahasiswa sebulan sekali di area kampus, stan gratis
+                  untuk usaha mahasiswa baru, dan kelas singkat pencatatan
+                  keuangan serta pemasaran daring. Usaha yang sudah jalan
+                  setahun dibantu masuk pameran kampus yang lebih besar.</p>
+              </div>
+            </details>
+          </li>
+          <li class="program-item">
+            <details>
+              <summary>
+                <span class="program-num" aria-hidden="true">05</span>
+                <span class="program-head"><span class="program-name">Transparansi Anggaran</span>
+                <span class="program-tag">Laporan tiga bulanan terbuka</span></span>
+                <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="program-body">
+                <p>Laporan keuangan BEM diterbitkan tiap tiga bulan dalam
+                  format yang bisa dibaca siapa saja: pemasukan, pemakaian per
+                  program, dan sisa dana. Dokumennya disimpan terbuka dan
+                  dibahas di forum terbuka tiap akhir periode.</p>
+              </div>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-          <section className='bg-gray-300 text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden'>
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-            <h1 className='2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-              here is it<br /> enjoy it!
-            </h1>
-          </section>
-          <section className='text-white h-screen w-full bg-slate-950 grid place-content-center sticky top-0'>
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-            <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-              Thanks To Scroll.
-              <br /> Now Scroll Up Again☝️🏿
-            </h1>
-          </section>
-        </article>
-      </main>
-    </ReactLenis>
-  );
-});
+    <!-- Tahapan pemilihan -->
+    <section class="section tahapan" id="tahapan" aria-labelledby="tahapan-title">
+      <div class="wrap">
+        <p class="section-kicker">03 &mdash; Tahapan Pemilihan</p>
+        <h2 id="tahapan-title">Dari baca program sampai bilik suara.</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Kenali calonnya</h3>
+            <p>Lihat foto, baca visi-misi, dan tanyakan langsung saat debat
+              atau kampanye terbuka.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Baca programnya</h3>
+            <p>Buka tiap program di atas. Program yang bagus menyebut cara
+              kerja dan penanggung jawabnya, bukan cuma janji.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Coba simulasi coblos</h3>
+            <p>Latihan mencoblos di bawah supaya di bilik suara tidak bingung
+              — terutama pemilih pertama.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Coblos di hari pemilihan</h3>
+            <p>Bawa kartu identitas mahasiswa, ikuti arahan panitia, dan
+              coblos sesuai pilihanmu. Tanggal resmi diumumkan panitia
+              pemilihan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-Component.displayName = 'Component';
+    <!-- Simulasi coblos -->
+    <section class="section simulasi" id="simulasi" aria-labelledby="simulasi-title">
+      <div class="wrap simulasi-grid">
+        <div>
+          <p class="section-kicker">04 &mdash; Simulasi Coblos</p>
+          <h2 id="simulasi-title">Latihan mencoblos, sebelum hari-H.</h2>
+          <p class="section-lede">Klik kotak di kartu surat suara untuk
+            mencoblos. Stempel COBLOS akan muncul seperti di bilik suara.
+            <strong>Ini simulasi di perangkatmu saja — bukan suara resmi</strong>
+            dan tidak dikirim ke mana pun.</p>
+          <ul class="simulasi-points">
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Coblos sekali, tidak bisa ganda — seperti surat suara asli.</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Pilihanmu tersimpan di perangkat ini; tombol ulangi untuk latihan lagi.</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Di bilik suara asli, ikuti tata cara panitia pemilihan.</li>
+          </ul>
+        </div>
+        <div class="ballot" id="ballot" role="group" aria-label="Kartu surat suara simulasi">
+          <div class="ballot-perforation" aria-hidden="true"></div>
+          <p class="ballot-head">Surat Suara &middot; Simulasi</p>
+          <p class="ballot-sub">Pemilihan Ketua BEM &middot; 2026</p>
+          <button class="ballot-row" type="button" id="ballot-row" aria-pressed="false" aria-describedby="ballot-status">
+            <span class="ballot-box" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <img class="ballot-photo" src="hamdan.png" alt="" width="64" height="64">
+            <span class="ballot-candidate"><strong>01 &middot; Hamdan</strong><span>Calon Ketua BEM</span></span>
+            <span class="ballot-stamp" id="ballot-stamp" aria-hidden="true">Coblos</span>
+          </button>
+          <p class="ballot-status" id="ballot-status" role="status">Belum dicoblos — klik kotak untuk mencoblos.</p>
+          <button class="btn btn-ghost ballot-reset" type="button" id="ballot-reset" hidden>Ulangi simulasi</button>
+          <p class="ballot-fineprint">Simulasi latihan. Bukan pemungutan suara resmi. Pilihan tersimpan lokal di perangkat ini.</p>
+        </div>
+      </div>
+    </section>
 
-export default Component;
+    <!-- Dukung -->
+    <section class="section dukung" id="dukung" aria-labelledby="dukung-title">
+      <div class="wrap dukung-grid">
+        <div>
+          <p class="section-kicker">05 &mdash; Dukung Kampanye</p>
+          <h2 id="dukung-title">Tulis dukunganmu, jadi relawan, atau sekadar titip pesan.</h2>
+          <p class="section-lede">Formulir ini tersimpan di perangkatmu
+            (localStorage) sebagai demo — tidak ada server dan tidak ada data
+            yang dikirim ke mana pun. Untuk dukungan resmi, hubungi tim
+            kampanye lewat kanal resmi kampus.</p>
+          <p class="dukung-count"><strong id="supporter-count">0</strong> dukungan tercatat di perangkat ini.</p>
+        </div>
+        <form class="support-form" id="support-form" novalidate>
+          <label for="f-nama">Nama <span aria-hidden="true">*</span></label>
+          <input id="f-nama" name="nama" type="text" autocomplete="name" required minlength="2" placeholder="Nama kamu">
+          <p class="field-error" id="err-nama" hidden>Isi nama minimal 2 huruf.</p>
+          <label for="f-prodi">Program studi / fakultas <span aria-hidden="true">*</span></label>
+          <input id="f-prodi" name="prodi" type="text" autocomplete="organization" required minlength="2" placeholder="Contoh: Informatika">
+          <p class="field-error" id="err-prodi" hidden>Isi program studi atau fakultas.</p>
+          <label for="f-pesan">Pesan untuk calon (opsional)</label>
+          <textarea id="f-pesan" name="pesan" rows="3" maxlength="280" placeholder="Satu hal yang paling kamu harapkan dari BEM…"></textarea>
+          <p class="field-hint"><span id="pesan-count">0</span>/280 karakter</p>
+          <fieldset class="support-role">
+            <legend>Saya mau membantu sebagai</legend>
+            <label><input type="radio" name="peran" value="Pendukung" checked> Pendukung</label>
+            <label><input type="radio" name="peran" value="Relawan"> Relawan kampanye</label>
+            <label><input type="radio" name="peran" value="Pengamat"> Pengamat (netral)</label>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Kirim Dukungan</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+      <div class="wrap">
+        <h3 class="supporters-title">Dukungan di perangkat ini</h3>
+        <ul class="supporters-list" id="supporters-list">
+          <li class="supporters-empty">Belum ada dukungan. Jadilah yang pertama lewat formulir di atas.</li>
+        </ul>
+        <button class="btn btn-ghost" type="button" id="supporters-clear" hidden>Hapus semua dukungan lokal</button>
+      </div>
+    </section>
 
-demo.tsx
-// demo.tsx
-import React from 'react';
-import Component from '@/components/ui/smooth-scroll';
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap">
+        <p class="section-kicker">06 &mdash; Tanya Jawab</p>
+        <h2 id="faq-title">Yang sering ditanyakan.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Apakah simulasi coblos di situs ini suara resmi? <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Bukan. Simulasi hanya latihan di perangkatmu — pilihannya tidak
+              dikirim ke mana pun dan tidak dihitung. Suara resmi hanya yang
+              dicoblos di bilik suara pada hari pemilihan, mengikuti tata cara
+              panitia pemilihan.</p>
+          </details>
+          <details>
+            <summary>Kenapa isi program kerja disebut "contoh"? <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Repo ini awalnya hanya berisi foto kandidat dan dokumen generik
+              — tidak ada program kerja resmi. Supaya situs ini tetap jadi
+              template yang bisa dipakai tim kampanye mana pun, program kerja
+              ditulis sebagai contoh yang masuk akal dan wajib diganti dengan
+              program resmi sebelum dipakai sungguhan.</p>
+          </details>
+          <details>
+            <summary>Apakah data dukungan saya dikirim ke server? <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Tidak. Situs ini statis tanpa backend: nama, prodi, dan pesan
+              hanya tersimpan di localStorage perangkatmu dan bisa dihapus
+              dengan tombol "Hapus semua dukungan lokal".</p>
+          </details>
+          <details>
+            <summary>Bagaimana tim kampanye memakai template ini? <svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Ganti foto di <code>hamdan.png</code>, nama dan nomor urut di
+              <code>index.html</code>, program kerja dan visi-misi dengan data
+              resmi, lalu deploy ulang ke Cloudflare Pages (lihat
+              <code>docs/deploy.md</code>). Warna dan font diatur di
+              <code>styles.css</code> dan <code>docs/DESIGN.md</code>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
 
-function ComponentDemo() {
-  return (
-    <Component />
-  );
-}
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <p class="footer-num">01 &middot; Hamdan</p>
+        <p>Calon Ketua BEM &mdash; BEM yang kerja, bukan sekadar janji.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <a href="#visi">Visi &amp; Misi</a>
+        <a href="#program">Program</a>
+        <a href="#tahapan">Tahapan</a>
+        <a href="#simulasi">Simulasi Coblos</a>
+        <a href="#dukung">Dukung</a>
+      </nav>
+      <div class="footer-meta">
+        <a class="gh-link" href="https://github.com/dezzorigin/bem-election-campaign" target="_blank" rel="noopener">Kode sumber di GitHub</a>
+        <p>Konten contoh — ganti dengan data resmi tim kampanye. Situs statis, tanpa pelacak, tanpa server.</p>
+        <p>&copy; <span id="year">2026</span> Tim Kampanye Hamdan &middot; Lisensi MIT</p>
+      </div>
+    </div>
+  </footer>
 
-export { ComponentDemo as DemoOne };
-```
-
-Install NPM dependencies:
-```bash
-lenis
-```
-
-Implementation Guidelines
- 1. Analyze the component structure and identify all required dependencies
- 2. Review the component's argumens and state
- 3. Identify any required context providers or hooks and install them
- 4. Questions to Ask
- - What data/props will be passed to this component?
- - Are there any specific state management requirements?
- - Are there any required assets (images, icons, etc.)?
- - What is the expected responsive behavior?
- - What is the best place to use this component in the app?
-
-Steps to integrate
- 0. Copy paste all the code above in the correct directories
- 1. Install externaal dependencies
- 2. Fill image assets with Unsplash stock images you know exist
- 3. Use lucide-react icons for svgs or logos if component requires them
-﻿
+  <script src="app.js" defer></script>
+</body>
+</html>

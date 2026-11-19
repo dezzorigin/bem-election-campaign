@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Diagram — Bem Election Campaign</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 40px; color: #14201e; background: #fdfbf3; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-top: 48px; }
+  p { max-width: 70ch; line-height: 1.6; }
+  figure { margin: 24px 0; }
+  figcaption { font-size: 14px; color: #5c6b66; margin-top: 8px; }
+  svg text { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<h1>Diagram — Bem Election Campaign</h1>
+<p>Diagram gaya cathrynlavery/diagram-design: HTML + SVG, tanpa Mermaid.
+Dua diagram: arsitektur situs statis, dan alur dua interaksi utama
+(simulasi coblos + formulir dukungan). Keduanya tanpa backend — semua
+state hidup di localStorage perangkat pengunjung.</p>
+
+<h2>1. Arsitektur: situs statis, tanpa server</h2>
+<figure>
+<svg width="860" height="300" viewBox="0 0 860 300" role="img" aria-label="Diagram arsitektur: pengunjung membuka Cloudflare Pages, yang menyajikan index, CSS, JS, foto, dan kartu OG; interaksi disimpan di localStorage perangkat">
+  <rect x="8" y="110" width="150" height="80" fill="#fdfbf3" stroke="#14201e" stroke-width="2"/>
+  <text x="83" y="142" text-anchor="middle" font-size="14" font-weight="bold">Pengunjung</text>
+  <text x="83" y="164" text-anchor="middle" font-size="12">browser</text>
+  <rect x="230" y="40" width="230" height="220" fill="#0e7c7b" stroke="#14201e" stroke-width="2"/>
+  <text x="345" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#fdfbf3">Cloudflare Pages</text>
+  <text x="345" y="94" text-anchor="middle" font-size="12" fill="#fdfbf3">bem-election-campaign</text>
+  <text x="345" y="126" text-anchor="middle" font-size="12" fill="#fdfbf3">index.html</text>
+  <text x="345" y="150" text-anchor="middle" font-size="12" fill="#fdfbf3">styles.css + app.js</text>
+  <text x="345" y="174" text-anchor="middle" font-size="12" fill="#fdfbf3">hamdan.png + favicon.svg</text>
+  <text x="345" y="198" text-anchor="middle" font-size="12" fill="#fdfbf3">og-image.png (1200x630)</text>
+  <text x="345" y="236" text-anchor="middle" font-size="12" fill="#ffd60a">tanpa build · tanpa server</text>
+  <rect x="540" y="110" width="180" height="80" fill="#ffd60a" stroke="#14201e" stroke-width="2"/>
+  <text x="630" y="142" text-anchor="middle" font-size="14" font-weight="bold">localStorage</text>
+  <text x="630" y="164" text-anchor="middle" font-size="12">di perangkat pengunjung</text>
+  <line x1="158" y1="150" x2="230" y2="150" stroke="#c1121f" stroke-width="3"/>
+  <polygon points="230,150 218,144 218,156" fill="#c1121f"/>
+  <line x1="460" y1="150" x2="540" y2="150" stroke="#14201e" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="540,150 528,144 528,156" fill="#14201e"/>
+  <text x="500" y="132" text-anchor="middle" font-size="11">baca/tulis</text>
+  <text x="194" y="132" text-anchor="middle" font-size="11">HTTPS GET</text>
+  <rect x="230" y="272" width="490" height="22" fill="none"/>
+  <text x="345" y="288" font-size="12" fill="#5c6b66">Repo GitHub dezzorigin/bem-election-campaign → CI (4 job) → deploy Pages</text>
+</svg>
+<figcaption>Gambar 1 — Arsitektur. Satu-satunya penyimpanan adalah
+localStorage di perangkat pengunjung; tidak ada basis data, API, atau
+pelacak.</figcaption>
+</figure>
+
+<h2>2. Alur interaksi: simulasi coblos &amp; dukungan</h2>
+<figure>
+<svg width="860" height="340" viewBox="0 0 860 340" role="img" aria-label="Diagram alur: klik kartu surat suara menyimpan pilihan ke localStorage dan menampilkan stempel COBLOS; formulir dukungan divalidasi lalu disimpan ke localStorage dan dirender di daftar">
+  <rect x="8" y="30" width="180" height="56" fill="#fdfbf3" stroke="#14201e" stroke-width="2"/>
+  <text x="98" y="55" text-anchor="middle" font-size="13" font-weight="bold">Klik kartu surat suara</text>
+  <text x="98" y="74" text-anchor="middle" font-size="12">#ballot-row</text>
+  <rect x="8" y="140" width="180" height="56" fill="#fdfbf3" stroke="#14201e" stroke-width="2"/>
+  <text x="98" y="165" text-anchor="middle" font-size="13" font-weight="bold">Sudah dicoblos?</text>
+  <text x="98" y="184" text-anchor="middle" font-size="12">aria-pressed = true</text>
+  <rect x="8" y="250" width="180" height="56" fill="#fdfbf3" stroke="#14201e" stroke-width="2"/>
+  <text x="98" y="275" text-anchor="middle" font-size="13" font-weight="bold">Abaikan klik</text>
+  <text x="98" y="294" text-anchor="middle" font-size="12">sekali, seperti asli</text>
+  <rect x="330" y="140" width="200" height="56" fill="#0e7c7b" stroke="#14201e" stroke-width="2"/>
+  <text x="430" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#fdfbf3">Simpan localStorage</text>
+  <text x="430" y="184" text-anchor="middle" font-size="12" fill="#fdfbf3">ballot-v1 = hamdan</text>
+  <rect x="640" y="140" width="200" height="56" fill="#c1121f" stroke="#14201e" stroke-width="2"/>
+  <text x="740" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#fdfbf3">Stempel COBLOS muncul</text>
+  <text x="740" y="184" text-anchor="middle" font-size="12" fill="#fdfbf3">+ tombol ulangi</text>
+  <line x1="98" y1="86" x2="98" y2="140" stroke="#14201e" stroke-width="2"/>
+  <line x1="98" y1="196" x2="98" y2="250" stroke="#14201e" stroke-width="2"/>
+  <text x="108" y="228" font-size="12">ya</text>
+  <line x1="188" y1="168" x2="330" y2="168" stroke="#14201e" stroke-width="2"/>
+  <text x="252" y="156" font-size="12">belum</text>
+  <line x1="530" y1="168" x2="640" y2="168" stroke="#c1121f" stroke-width="3"/>
+  <rect x="330" y="30" width="200" height="56" fill="#fdfbf3" stroke="#14201e" stroke-width="2"/>
+  <text x="430" y="55" text-anchor="middle" font-size="13" font-weight="bold">Isi formulir dukungan</text>
+  <text x="430" y="74" text-anchor="middle" font-size="12">nama + prodi wajib</text>
+  <rect x="640" y="30" width="200" height="56" fill="#ffd60a" stroke="#14201e" stroke-width="2"/>
+  <text x="740" y="55" text-anchor="middle" font-size="13" font-weight="bold">Validasi → simpan</text>
+  <text x="740" y="74" text-anchor="middle" font-size="12">supporters-v1 + render daftar</text>
+  <line x1="530" y1="58" x2="640" y2="58" stroke="#14201e" stroke-width="2"/>
+</svg>
+<figcaption>Gambar 2 — Alur interaksi. Kedua jalur berakhir di
+localStorage; tidak ada data yang meninggalkan perangkat pengunjung.</figcaption>
+</figure>
+</body>
+</html>

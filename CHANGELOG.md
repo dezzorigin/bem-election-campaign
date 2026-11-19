@@ -8,32 +8,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial Next.js project setup for Bem Election Campaign
-- Voting page components with candidate cards
-- Real-time vote counting display
-- Admin panel for election management
-- Integration with Supabase for voter data
+- Rebuild total landing kampanye: hero kandidat, visi & misi, 5 program
+  kerja (bisa dibuka), 4 tahapan pemilihan, simulasi coblos interaktif,
+  formulir dukungan (localStorage), FAQ, footer.
+- `styles.css` + `app.js` (situs statis, tanpa framework, tanpa build).
+- Kartu preview tautan: semua tag og:/twitter: + `og-image.png`
+  1200x630 (PIL, `scripts/make-og-image.py`).
+- CI 4 job (`.github/workflows/ci.yml`): html-validate + gate P0,
+  advisory-sweep OSV, Playwright e2e (desktop + mobile), smoke.
+- Docs: DESIGN (kontrak arah desain), ARCHITECTURE, TESTING, DEPLOY,
+  og-preview, diagrams.html (HTML+SVG), PRD rewrite.
+- README standar + PRD v2.0 yang menggambarkan produk sebenarnya.
 
 ### Changed
-- Updated Next.js configuration and dependencies
-- Improved UI/UX for voter interface
-- Optimized image loading for candidate photos
-- Enhanced mobile responsiveness
+- `index.html` ditulis ulang penuh — sebelumnya isinya salinan
+  `prompt.md` (komponen React smooth-scroll), bukan HTML.
+- PRD v1.0 (generik, tidak menggambarkan produk) diganti PRD v2.0.
+- `.gitignore` dibersihkan (duplikat dihapus, pola env disatukan).
 
-### Fixed
-- Fixed vote counting race condition
-- Fixed candidate image loading errors
-- Fixed modal dialog closing issues
-
-### Security
-- Updated dependency versions to patch vulnerabilities
-- Fixed potential XSS vulnerabilities in input fields
+### Removed
+- Klaim lama di CHANGELOG (setup Next.js, voting real-time, admin
+  panel, Supabase) — tidak pernah ada di repo; dihapus karena tidak
+  benar. Riwayat jujur repo: landing statis + foto kandidat.
 
 ## [1.0.0] - 2024-11-05
 
 ### Added
-- Initial project scaffold for Bem Election Campaign
-- Voting system with candidate selection
-- Real-time vote display
-- Admin panel for election management
-- Integration with Supabase database
+- Scaffold awal repo: README, LICENSE, PRD generik, `hamdan.png`,
+  `prompt.md`, `index.html` (salinan prompt, bukan halaman).
