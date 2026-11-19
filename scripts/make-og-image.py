@@ -69,7 +69,7 @@ d.text((cx - tw / 2, cy - 20), "COBLOS", font=f_stamp, fill=RED)
 
 # footer url
 f_url = ImageFont.truetype(MONO_B, 28)
-d.text((72, 540), "bem-election-campaign.pages.dev", font=f_url, fill=GREY)
+d.text((72, 540), "bem-election.pages.dev", font=f_url, fill=GREY)
 
 img.save("/home/hatch/workspace/bem-election-campaign/og-image.png", "PNG", optimize=True)
 print("saved og-image.png")

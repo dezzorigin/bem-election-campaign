@@ -35,7 +35,7 @@ try {
   for (const tag of ['og:title', 'og:description', 'og:type', 'og:url', 'og:image', 'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image']) {
     check(home.body.includes(tag), `/ tidak mengandung tag ${tag} (og-preview.md)`);
   }
-  check(home.body.includes('https://bem-election-campaign.pages.dev/og-image.png'), '/ og:image bukan URL absolut bem-election-campaign.pages.dev/og-image.png');
+  check(home.body.includes('https://bem-election.pages.dev/og-image.png'), '/ og:image bukan URL absolut bem-election.pages.dev/og-image.png');
   check(home.body.includes('Hamdan'), '/ tidak mengandung nama kandidat');
   check(home.body.includes('github.com/dezzorigin/bem-election-campaign'), '/ tidak mengandung tautan GitHub repo');
   check(home.body.includes('hamdan.png'), '/ tidak memakai foto kandidat');

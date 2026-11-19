@@ -5,7 +5,7 @@ visi-misi, program kerja, tahapan pemilihan, simulasi coblos interaktif,
 dan formulir dukungan. Situs statis (HTML/CSS/JS murni, tanpa build,
 tanpa backend, tanpa server).
 
-**Live:** https://bem-election-campaign.pages.dev/
+**Live:** https://bem-election.pages.dev/
 
 ![Hamdan — Calon Ketua BEM, nomor urut 01](hamdan.png)
 

@@ -86,8 +86,8 @@ const html = readFileSync(join(ROOT, 'index.html'), 'utf-8');
 for (const tag of ['og:title', 'og:description', 'og:type', 'og:url', 'og:image', 'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image']) {
   if (!html.includes(tag)) fail(`index.html tidak mengandung tag ${tag}`);
 }
-if (!html.includes('https://bem-election-campaign.pages.dev/og-image.png')) {
-  fail('og:image bukan URL absolut bem-election-campaign.pages.dev/og-image.png');
+if (!html.includes('https://bem-election.pages.dev/og-image.png')) {
+  fail('og:image bukan URL absolut bem-election.pages.dev/og-image.png');
 }
 if (!html.includes('https://github.com/dezzorigin/bem-election-campaign')) {
   fail('index.html tidak mengandung tautan GitHub repo');

@@ -22,13 +22,13 @@ python3 ~/workspace/github-actions/cf_pages.py deploy bem-election-campaign ~/wo
 Semua cek memakai python urllib (lihat `docs/testing.md` § "Batas VM
 dev" — curl -o tidak bisa dipercaya di VM ini):
 
-1. Root `https://bem-election-campaign.pages.dev/` → 200.
+1. Root `https://bem-election.pages.dev/` → 200.
 2. Marker ter-render: halaman memuat `Hamdan`, `Simulasi Coblos`,
    `hamdan.png`, dan tautan `github.com/dezzorigin/bem-election-campaign`.
 3. Semua tag og:/twitter: ada (`og:title`, `og:description`, `og:type`,
    `og:url`, `og:image`, `twitter:card`, `twitter:title`,
    `twitter:description`, `twitter:image`).
-4. `https://bem-election-campaign.pages.dev/og-image.png` → 200 dengan
+4. `https://bem-election.pages.dev/og-image.png` → 200 dengan
    content-type `image/*` (bukan `text/html` — fallback Pages menipu).
 5. `/hamdan.png`, `/styles.css`, `/app.js`, `/favicon.svg` → 200.
 
@@ -48,5 +48,5 @@ Setelah PR merge, set about homepage repo ke URL Pages:
 
 ```
 PATCH https://api.github.com/repos/dezzorigin/bem-election-campaign
-{ "homepage": "https://bem-election-campaign.pages.dev/" }
+{ "homepage": "https://bem-election.pages.dev/" }
 ```

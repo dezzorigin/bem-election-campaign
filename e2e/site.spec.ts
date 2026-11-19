@@ -12,7 +12,7 @@ test.describe('Bem Election Campaign — landing kampanye BEM', () => {
       expect(content, `meta ${prop} kosong`).toBeTruthy();
     }
     expect(await page.locator('meta[property="og:image"]').getAttribute('content'))
-      .toBe('https://bem-election-campaign.pages.dev/og-image.png');
+      .toBe('https://bem-election.pages.dev/og-image.png');
     for (const name of ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image']) {
       const content = await page.locator(`meta[name="${name}"]`).getAttribute('content');
       expect(content, `meta ${name} kosong`).toBeTruthy();

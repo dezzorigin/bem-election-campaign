@@ -8,8 +8,8 @@ dan `scripts/smoke.mjs`):
 - `og:title` — "Hamdan — Calon Ketua BEM · Nomor Urut 01"
 - `og:description` — "Visi-misi, program kerja, tahapan pemilihan, dan simulasi coblos. BEM yang kerja, bukan sekadar janji."
 - `og:type` — "website"
-- `og:url` — "https://bem-election-campaign.pages.dev/"
-- `og:image` — "https://bem-election-campaign.pages.dev/og-image.png" (URL absolut)
+- `og:url` — "https://bem-election.pages.dev/"
+- `og:image` — "https://bem-election.pages.dev/og-image.png" (URL absolut)
 - `twitter:card` — "summary_large_image"
 - `twitter:title`, `twitter:description`, `twitter:image` — sama dengan padanan og:
 
