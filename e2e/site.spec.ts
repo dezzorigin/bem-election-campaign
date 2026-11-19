@@ -34,7 +34,8 @@ test.describe('Bem Election Campaign — landing kampanye BEM', () => {
   test('tahapan: 4 langkah', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('.step')).toHaveCount(4);
-    await expect(page.locator('.step').nth(3)).toContainText('bilik suara');
+    await expect(page.locator('.step').nth(2)).toContainText('bilik suara');
+    await expect(page.locator('.step').nth(3)).toContainText('hari pemilihan');
   });
 
   test('simulasi coblos: klik sekali, stempel muncul, ulangi mereset', async ({ page }) => {
@@ -91,12 +92,15 @@ test.describe('Bem Election Campaign — landing kampanye BEM', () => {
     expect(js.status()).toBe(200);
   });
 
-  test('mobile: tanpa scroll horizontal', async ({ page }) => {
+  test('mobile: tanpa scroll horizontal', async ({ page }, testInfo) => {
     await page.goto('/');
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBe(0);
-    // Menu mobile bisa dibuka.
-    await page.locator('.nav-toggle').click();
-    await expect(page.locator('.site-nav')).toHaveClass(/open/);
+    // Tombol menu hanya tampil di viewport mobile (CSS max-width 640px);
+    // di proyek desktop tombolnya display:none dan tidak bisa diklik.
+    if (testInfo.project.name === 'mobile') {
+      await page.locator('.nav-toggle').click();
+      await expect(page.locator('.site-nav')).toHaveClass(/open/);
+    }
   });
 });
