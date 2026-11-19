@@ -1,0 +1,36 @@
+import { defineConfig, devices } from '@playwright/test';
+
+// E2E Bem Election Campaign terhadap server statis lokal (lihat CI).
+// Situs ini statis tanpa build: webServer hanya menjalankan
+// `python3 -m http.server` dari root repo.
+// Chromium lokal: set PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ke cache
+// ~/.cache/ms-playwright/chromium-1234 — JANGAN `npx playwright install`
+// di VM ini. Di CI (GitHub runner) browser di-install oleh workflow.
+export default defineConfig({
+  testDir: './e2e',
+  timeout: 90_000,
+  expect: { timeout: 20_000 },
+  fullyParallel: false,
+  retries: 0,
+  reporter: 'list',
+  webServer: {
+    command: 'python3 -m http.server 4174 --bind 127.0.0.1',
+    port: 4174,
+    timeout: 120_000,
+    reuseExistingServer: true,
+  },
+  use: {
+    baseURL: process.env.BASE_URL || 'http://127.0.0.1:4174',
+    trace: 'retain-on-failure',
+    launchOptions: {
+      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
+      args: process.env.PLAYWRIGHT_PROXY
+        ? [`--proxy-server=${process.env.PLAYWRIGHT_PROXY}`]
+        : [],
+    },
+  },
+  projects: [
+    { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 } } },
+    { name: 'mobile', use: { ...devices['Pixel 7'], viewport: { width: 390, height: 844 } } },
+  ],
+});
